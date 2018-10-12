@@ -24,7 +24,7 @@ In this assignment, you'll create another fun and interactive game for web brows
      * In the `css` folder, make a file called `reset.css`. Paste into it the code found from the Meyerweb Reset.
      * In the images folder, save any of the images you plan on using.
 
-4. Set up your repository to deploy to Github Pages. "https://mervinserviano.github.io/unit-4-game/."
+4. Set up your repository to deploy to Github Pages. https://mervinserviano.github.io/unit-4-game/. https://github.com/mervinserviano?tab=repositories
 
 5. Push the above changes to GitHub. 
 
