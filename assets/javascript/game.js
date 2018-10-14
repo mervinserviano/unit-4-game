@@ -1,7 +1,7 @@
-var targetNumber;
+var randomNumber; //1. Start with random number.
 var totalScore = 0;
-var winCount = 0;
-var lossCount = 0;
+var wins = 0;
+var loses = 0;
 
 var crystal1;
 var crystal2;
@@ -9,16 +9,16 @@ var crystal3;
 var crystal4;
 
 function resetGame() {
-    targetNumber = Math.floor(Math.random() * 101) + 19;
+    randomNumber = Math.floor(Math.random() * 101) + 19;
     crystal1 = Math.floor(Math.random() * 12) + 1;
     crystal2 = Math.floor(Math.random() * 12) + 1;
     crystal3 = Math.floor(Math.random() * 12) + 1;
     crystal4 = Math.floor(Math.random() * 12) + 1;
     totalScore = 0
-    $("#wins").text(winCount)
-    $("#loss").text(lossCount)
+    $("#wins").text(wins)
+    $("#loss").text(loses)
     $("#total-score").text(totalScore)
-    $("#random-number").text(targetNumber);
+    $("#random-number").text(randomNumber);
 }
 
 function setScore(crystalValue) {
