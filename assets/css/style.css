@@ -9,7 +9,9 @@
     border-style: double
 }
 
-.random {}
+.random {
+    color: blueviolet
+}
 
 body{
     background-image: url('../images/GemCave.png');

@@ -1,3 +1,60 @@
+var targetNumber;
+var totalScore = 0;
+var winCount = 0;
+var lossCount = 0;
+
+var crystal1;
+var crystal2;
+var crystal3;
+var crystal4;
+
+function resetGame() {
+    targetNumber = Math.floor(Math.random() * 101) + 19;
+    crystal1 = Math.floor(Math.random() * 12) + 1;
+    crystal2 = Math.floor(Math.random() * 12) + 1;
+    crystal3 = Math.floor(Math.random() * 12) + 1;
+    crystal4 = Math.floor(Math.random() * 12) + 1;
+    totalScore = 0
+    $("#wins").text(winCount)
+    $("#loss").text(lossCount)
+    $("#total-score").text(totalScore)
+    $("#random-number").text(targetNumber);
+}
+
+function setScore(crystalValue) {
+    totalScore += crystalValue
+    $("#total-score").text(totalScore)
+    if (totalScore === randomNumber) {
+        wins++;
+        resetGame();
+        }
+    else if (totalScore >= randomNumber) {
+        loses++;
+        resetGame();
+    };
+}
+resetGame();
+
+$(document).ready(function () {
+
+    $(".crystal1").on("click", function() {
+        setScore(crystal1);
+    });
+
+    $(".crystal2").on("click", function() {
+        setScore(crystal2);
+    });
+
+    $(".crystal3").on("click", function() {
+        setScore(crystal3);
+    });
+
+    $(".crystal4").on("click", function() {
+        setScore(crystal4);
+    });
+});
+
+//2. Player clicks on crystal images and add specific amount of points to player total score.
 /*The player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters. 
 
 3. Here's how the app works:
