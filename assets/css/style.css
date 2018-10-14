@@ -1,0 +1,17 @@
+.instructions {
+    
+}
+
+.crystals img {
+    width: 10%;
+    height: auto;
+    border: 5px;
+    border-style: double
+}
+
+.random {}
+
+body{
+    background-image: url('../images/GemCave.png');
+    font-family: 'Berkshire Swash', cursive;
+}
