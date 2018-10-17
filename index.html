@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>UNIT-4-GAME</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <div class="jumbotron jumbotron-fluid">
-        <div class="container">
             <h1 class="display-4">Unit-4-Game</h1>
-            <p class="lead">Crystal Game.</p>
-        </div>
+            <p class="lead">Crystal Game.</p> 
     </div>
 
-    <div class="container">
+    <!--<div class="container">
         <div class="instructions">
 
             <p>You will be given a random number at the start of the game.</p>
@@ -31,19 +30,17 @@
             <p>Each time when the game starts, the game will change the values of each crystal</p>  
 
         </div>     
-    </div>
+    </div>-->
+    <div class="container">
     <div class="row">
-            <section class="randomNumber">
-                <p>Random Number<span id="randomNumber"></span></p>
-            </section>
-    </div>
-    <div>
-            <div class="winsLosses">
+        <div class="scoreboard">
                 <p>Wins: <span id="wins"></span></p>
                 <p>Losses: <span id="loss"></span></p>
-            </div>
+                <p id="SetNumber">Guess this number: <span id="random-number"></span></p>
+                <p>Your Total Score: <span id="total-score"></span></p>
     </div>
-
+</div>
+   
     <div class="row">
         <div id="gems">
             <img class="crystal1"src="Images/Crystal1.jpg" alt="crystal1">
@@ -53,13 +50,10 @@
          </div>
     </div>
 
-    <div>
-        <p>Your total score is:</p>
-        <p>Your guesses:</p>
-    </div>
+
+    <script src="assets/javascript/game.js"></script>
 
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/dojo/1.13.0/dojo/dojo.js"></script>
-    <script src="assets/javascript/game.js"></script>
-</body>
+    
+    
 </html>

@@ -1,4 +1,4 @@
-var randomNumber; //1. Start with random number.
+var targetNumber; //1. Start with random number.
 var totalScore = 0;
 var wins = 0;
 var loses = 0;
@@ -9,7 +9,7 @@ var crystal3;
 var crystal4;
 
 function resetGame() {
-    randomNumber = Math.floor(Math.random() * 101) + 19;
+    targetNumber = Math.floor(Math.random() * 101) + 19;
     crystal1 = Math.floor(Math.random() * 12) + 1;
     crystal2 = Math.floor(Math.random() * 12) + 1;
     crystal3 = Math.floor(Math.random() * 12) + 1;
@@ -18,17 +18,17 @@ function resetGame() {
     $("#wins").text(wins)
     $("#loss").text(loses)
     $("#total-score").text(totalScore)
-    $("#random-number").text(randomNumber);
+    $("#random-number").text(targetNumber);
 }
 
 function setScore(crystalValue) {
     totalScore += crystalValue
     $("#total-score").text(totalScore)
-    if (totalScore === randomNumber) {
+    if (totalScore === targetNumber) {
         wins++;
         resetGame();
         }
-    else if (totalScore >= randomNumber) {
+    else if (totalScore >= targetNumber) {
         loses++;
         resetGame();
     };
@@ -51,6 +51,7 @@ $(document).ready(function () {
 
     $(".crystal4").on("click", function() {
         setScore(crystal4);
+        console.log(crystal4)
     });
 });
 
